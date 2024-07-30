@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div id="retbtn">
+        <h1><a href="/">Go back to homepage</a></h1>
+    </div>
+    <% if (loggedin) {%>
+        <h2>You are already logged in</h2>
+    <%} else {%>
+    <div id="formdiv">
+        <div  id="formheadtext">
+            <h1>REGISTER</h1>
+        </div>
+        <form action="/register" method="POST">
+            <div id="forminputsdiv">
+                <label for="rname" class="rform-label">Enter a nickname</label><br>
+                <input type="text" id="rname" name="nickname" minlength="4" maxlength="32" required class="rinput"><br>
+                <label for="remail" class="rform-label">Enter an email</label><br>
+                <input type="text" id="remail" name="email" minlength="6" maxlength="64" required class="rinput"><br>
+                <label for="rpassword" class="rform-label">Enter a password</label><br>
+                <input type="password" id="rpassword" name="password" minlength="8" required maxlength="32" class="rinput"><br>
+                <label for="rpasswordconf" class="rform-label">Confirm a password</label><br>
+                <input type="password" id="rpasswordconf" name="passwordconf" minlength="8" required maxlength="32" class="rinput"><br>
+                <div id="formbuttonholder"><button type="submit" id="rformbutton" class="formbutton">Submit</button></div>
+                <h4>Already have an account? <a href="/login">Log in</a></h4>
+            </div>
+        </form>
+        <%if (message != undefined) {%>
+            <h2><%= message %></h2>
+        <% } %>
+        
+    </div>
+    <%}%>
+</body>
+</html>

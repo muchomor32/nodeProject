@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="retbtn">
+        <h1><a href="/">Go back to homepage</a></h1>
+    </div>
+    <% if (loggedin) {%>
+        <h2>You are already logged in</h2>
+    <%} else {%>
+    <div id="formdiv">
+        <div  id="formheadtext">
+            <h1>LOG IN</h1>
+        </div>
+        <form action="/login" method="POST">
+            <div id="forminputsdiv">
+                <label for="lname" class="lform-label">Username or email</label><br>
+                <input type="text" id="lname" name="name" minlength="4" required maxlength="32" class="linput"><br>
+                <label for="lpassword" class="lform-label">Password</label><br>
+                <input type="password" id="lpassword" name="password" minlength="8" required maxlength="32" class="linput"><br>
+                <div id="formbuttonholder"><button type="submit">Submit</button></div>
+                <h4>Don't have an account? <a href="/register">Register</a></h4>
+            </div>
+        </form>
+        
+        <%if (message != undefined) {%>
+            <h2><%= message %></h2>
+        <% } %>
+        
+    </div>
+    <%}%>
+</body>
+</html>

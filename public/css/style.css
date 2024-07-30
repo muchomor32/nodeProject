@@ -1,0 +1,38 @@
+* {
+    font-family:'Malgun Gothic', 'Helvetica', 'Comic Sans MS';
+}
+
+#formdiv {
+    border-radius: 15px;
+    border-right: 2px lightgrey solid;
+    border-left: 2px lightgrey solid;
+    border-bottom: 2px lightgrey solid;
+    width:30%;
+    margin:auto;
+}
+#formheadtext {
+    text-align:center;
+    margin:0;
+    background-color: rgb(206, 206, 236);
+    border-bottom: 1px lightgray solid;
+    border-top: 1px white solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#forminputsdiv{
+    margin: auto;
+    width: 50%;
+    padding: 10%;
+}
+
+.linput, .rinput {
+    width:100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#formbuttonholder {
+    padding-top:2%;
+    text-align: center;
+}
